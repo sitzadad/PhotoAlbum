@@ -27,7 +27,8 @@
   width: 250px;
   height: 250px;
   display: inline-block;
-  background-color: lightblue; }
+  background-color: lightblue;
+  background-size: cover; }
 
 .imgLabel {
   width: 100%;
@@ -82,7 +83,7 @@ header {
     position: absolute;
     top: 33%;
     left: 2%;
-    font-size: 2em; }
+    font-size: 1.5em; }
 
 #rightWrapper {
   float: left;
