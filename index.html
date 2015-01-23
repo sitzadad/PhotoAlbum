@@ -4,35 +4,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans"/>
   <title></title>
 </head>
 <body>
   <nav class="invis">
-    <a href="">Album 1</a>
-    <a href="">Album 2</a>
-    <a href="">Album 3</a>
-    <a href="">Album 4</a>
-    <a href="">Album 5</a>
-    <a href="">Album 6</a>
+    <ul class="wipeUL">
+      <li><button class="styleButton">Home</button></li>
+      <li><button class="styleButton">Album 1</button></li>
+      <li><button class="styleButton">Album 2</button></li>
+      <li><button class="styleButton">Album 3</button></li>
+      <li><button class="styleButton">Album 4</button></li>
+      <li><button class="styleButton">Album 5</button></li>
+      <li><button class="styleButton">Album 6</button></li>
+    </ul>
   </nav>
   <header>
-    <a href="" class="invis"></a>
+    <button class="invis">Back to Album 1</button>
     <h1>My Albums</h1>
   </header>
-
   <div id="rightWrapper">
-    <div class="smallRow">
-      <a href="">Album 1</a>
-      <a href="">Album 2</a>
-      <a href="">Album 3</a>
-    </div>
-    <div class="smallRow">
-      <a href="">Album 4</a>
-      <a href="">Album 5</a>
-      <a href="">Album 6</a>
-    </div>
+    <ul class="wipeUL">
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 1</div>
+        </div>
+      </li>
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 2</div>
+        </div>
+      </li>
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 3</div>
+        </div>
+      </li>
+    </ul>
+    <ul class="wipeUL">
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 4</div>
+        </div>
+      </li>
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 5</div>
+        </div>
+      </li>
+      <li>
+        <div class="imgOut">
+          <div class="imgIn"></div>
+          <div class="imgLabel">Album 6</div>
+        </div>
+      </li>
+    </ul>
   </div>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="main.js"></script>
-  </div>
 </body>

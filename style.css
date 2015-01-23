@@ -1,93 +1,95 @@
 .invis {
   display: none; }
 
+.wipeUL {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.styleButton, header button {
+  background-color: #d5d6d9;
+  border: 3px solid #2d4a87;
+  font-size: 1.5em;
+  font-family: "Open Sans";
+  color: #2d4a87;
+  border-radius: 10px;
+  transition: all linear 300ms;
+  padding: 0.2em 1em; }
+
+.imgOut {
+  padding-top: 1.5em;
+  width: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1em grey;
+  transition: all linear 300ms; }
+
+.imgIn {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  background-color: lightblue; }
+
+.imgLabel {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #2d4a87;
+  padding: 1em 0; }
+
+.imgOut:hover {
+  transform: scale(1.05, 1.05);
+  cursor: pointer; }
+
+button:hover {
+  background-color: #2d4a87;
+  color: white;
+  border: 3px solid white;
+  cursor: pointer; }
+
 body {
-  background-color: lightgrey;
-  margin: 0; }
+  background-color: white;
+  margin: 0;
+  color: #2d4a87;
+  font-family: "Open Sans"; }
+
+nav {
+  float: left;
+  width: 15%;
+  box-sizing: border-box;
+  background-color: #d5d6d9;
+  padding: 10em 0;
+  height: 995px; }
+  nav ul {
+    text-align: center; }
+    nav ul li {
+      padding: 10px 0; }
+      nav ul li button {
+        width: 90%; }
 
 header {
   width: 100%;
-  height: 150px;
-  background-color: grey;
+  height: 125px;
+  background-color: #d5d6d9;
   float: left;
   text-align: center;
-  display: relative; }
-  header a {
-    color: black;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    width: 200px;
-    padding: 1rem 0;
-    background-color: white;
-    box-sizing: border-box;
-    border: 4px solid black;
-    position: absolute;
-    left: 2%;
-    top: 3rem; }
+  position: relative; }
   header h1 {
-    line-height: 150px;
-    text-align: center;
-    font-family: Arial;
-    font-size: 4rem;
-    margin: 0;
-    display: inline-block; }
+    font-size: 4em;
+    margin: auto;
+    display: inline-block;
+    line-height: 125px; }
+  header button {
+    position: absolute;
+    top: 33%;
+    left: 2%;
+    font-size: 2em; }
 
 #rightWrapper {
   float: left;
   width: 100%; }
-
-.smallRow {
-  display: flex;
-  margin: 50px 0;
-  justify-content: space-around; }
-  .smallRow a {
-    width: 200;
-    height: 300;
-    display: block;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    line-height: 550px; }
-
-.smallRow:nth-child(1) a:nth-child(1) {
-  background-image: url(http://www.fillmurray.com/200/300); }
-
-.smallRow:nth-child(1) a:nth-child(2) {
-  background-image: url(http://lorempixel.com/200/300/nightlife); }
-
-.smallRow:nth-child(1) a:nth-child(3) {
-  background-image: url(http://lorempixel.com/200/300/city); }
-
-.smallRow:nth-child(2) a:nth-child(1) {
-  background-image: url(http://lorempixel.com/200/300/nature); }
-
-.smallRow:nth-child(2) a:nth-child(2) {
-  background-image: url(http://lorempixel.com/200/300/sports); }
-
-.smallRow:nth-child(2) a:nth-child(3) {
-  background-image: url(http://lorempixel.com/200/300/cats); }
-
-nav {
-  float: left;
-  width: 20%;
-  height: 1100px;
-  background-color: grey;
-  padding-top: 12rem; }
-  nav a {
-    color: black;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    display: block;
+  #rightWrapper ul {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    padding: 1rem 0;
-    background-color: white;
-    box-sizing: border-box;
-    border: 4px solid black;
-    margin: 10px 0;
-    text-align: center; }
+    text-align: center;
+    margin: 2em auto 4em auto; }

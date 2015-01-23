@@ -1,0 +1,49 @@
+.invis{
+  display:none;
+}
+.wipeUL{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+.styleButton{
+  background-color:$bg_front;
+  border:3px solid $font-color;
+  font-size:1.5em;
+  font-family:$font_style;
+  color:$font_color;
+  border-radius:10px;
+  transition:all linear 300ms;
+  padding:0.2em 1em;
+}
+.imgOut{
+  padding-top:1.5em;
+  width:300px;
+  box-sizing:border-box;
+  box-shadow:0 0 1em grey;
+  transition:all linear 300ms;
+}
+.imgIn{
+  width:250px;
+  height:250px;
+  display:inline-block;
+  background-color:lightblue;
+}
+.imgLabel{
+  width:100%;
+  display:inline-block;
+  font-size:1.5em;
+  color:$font_color;
+  padding:1em 0;
+}
+//*********************************************
+.imgOut:hover{
+  transform:scale(1.05,1.05);
+  cursor:pointer;
+}
+button:hover{
+  background-color:$font_color;
+  color:$bg_back;
+  border:3px solid $bg_back;
+  cursor:pointer;
+}
