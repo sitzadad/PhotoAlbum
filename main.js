@@ -1,12 +1,60 @@
 $(document).ready(function(){
   "use strict";
-  $(".imgOut").on("click", function(event){
+  $(".imgOut").add(".albumButton").on("click", function mainFun(event){
+    //unnecessary in this instance, but remember for later
     event.preventDefault();
+    //resizing all images to small size (necessary if coming out of enlarged view)
+    $(".imgIn").css({"width":"250px","height":"250px"});
+    $(".imgOut").css("width","300px");
+    //reappears any photos that were previously set to "display:none;"
+    $("#rightWrapper li").removeClass("invis");
+    //disappears header "back" button (visible if coming out of enlaged image view)
+    $("header button").addClass("invis");
+    //making room for appearance of left floating <nav>
     $("header").css("width","85%");
-    $("header").css("background-color","transparent");
     $("#rightWrapper").css("width","85%");
+    //<nav> appears floating left
     $("nav").removeClass("invis");
-
+    //home button on <nav> reloads page
+    $(".homeButton").on("click", function(){
+      document.location.reload(true);
+    });
+    //removing header background color
+    $("header").css("background-color","transparent");
+    //getting album #
+    var albumNum=$(this).attr('rel');
+    //replacing heading text with album #
+    $("header h1").text(albumNum);
+    //replaces album labels with photo labels
+    for(var i=0, j=1; i<6; i++, j++){
+      $(".imgLabel").eq(i).text("Photo "+j);
+    }
+    //triggers the enlarging of an album image
+    $(".imgOut").on("click", function(){
+      //<nav> disappears
+      $("nav").addClass("invis");
+      //enlarging header and rightWrapper to fill space left by <nav>
+      $("header").css("width","100%");
+      $("#rightWrapper").css("width","100%");
+      //header "back" button appears
+      $("header button").removeClass("invis");
+      //removes images except the selected image
+      $("#rightWrapper li").not($(this).parent()).addClass("invis");
+      //enlarging selected image
+      $(this).children(".imgIn").css({"width":"500px","height":"500px"});
+      $(this).css("width","550px");
+      //getting current album #
+      var backToWhere=$("header h1").text();
+      console.log(backToWhere);
+      //Overriding header back button's rel value with current album # (used to go back)
+      $("header button").attr("rel", backToWhere);
+      //Overriding header back button's text
+      $("header button").text(backToWhere);
+      //header "back" button calling topmost level function (2 up from current)
+      $("header button").on("click", function(event){
+        mainFun(event);
+      });
+    });
   });
 });
 
