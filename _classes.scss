@@ -13,7 +13,7 @@
   font-family:$font_style;
   color:$font_color;
   border-radius:10px;
-  transition:all linear 300ms;
+  transition:background-color 300ms linear, color 300ms linear, border 300ms linear;
   padding:0.2em 1em;
 }
 .imgOut{
@@ -21,7 +21,7 @@
   width:300px;
   box-sizing:border-box;
   box-shadow:0 0 1em grey;
-  transition:all linear 300ms;
+  transition:transform 300ms linear;
 }
 .imgIn{
   width:250px;
